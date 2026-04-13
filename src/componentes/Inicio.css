@@ -1,0 +1,97 @@
+/* src/components/Inicio.css */
+
+.inicio-wrapper {
+  /* Fondo con un color que cambiaremos en el modo oscuro */
+  background-color: #e6f7ff; 
+  color: #333;
+  /* Altura enorme para que ocupe la pantalla, pero fixed */
+  height: 90vh; 
+  position: relative;
+  overflow: hidden; /* Por si las moscas */
+}
+
+.inicio-inner {
+  display: flex;
+  /* No usamos flex-direction: column para móvil aquí, 
+     para que se rompa en móvil y tener que arreglarlo luego */
+  width: 90%;
+  max-width: 1200px;
+  /* Centrado horizontal raro en vez de margin: auto */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inicio-text-area {
+  width: 60%; /* El texto ocupa más */
+  padding-right: 5%;
+}
+
+.inicio-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0px;
+  color: #555;
+}
+
+.inicio-main-title {
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  color: #007bff; /* Un azul estándar */
+}
+
+.inicio-tagline {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.inicio-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px; /* Para que el texto no se estire mucho */
+}
+
+.inicio-cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  /* Margen negativo para ajustar la posición a ojo */
+  margin-left: -2px; 
+}
+
+/* El círculo de la derecha */
+.inicio-image-area {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio-circle {
+  width: 280px;
+  height: 280px;
+  background-color: white;
+  border-radius: 50%; /* Esto lo hace redondo */
+  /* Sombras exageradas para el estilo de estudiante */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  overflow: hidden; /* Para que la imagen no se salga */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #fff;
+}
+
+.inicio-avatar {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
