@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, isDarkMode }) => {
 
   const nav = {
     display: 'flex',
@@ -49,6 +49,12 @@ const Navbar = () => {
         <li><a href="#sobre-mi" style={link}>Sobre mí</a></li>
         <li><a href="#proyectos" style={link}>Proyectos</a></li>
         <li><a href="#contacto" style={link}>Contacto</a></li>
+
+        <li>
+          <button onClick={toggleTheme} className="theme-btn">
+            {isDarkMode ? '☀️' : '🌙'}
+          </button>
+        </li>
         
       </ul>
     </nav>
