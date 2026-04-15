@@ -53,7 +53,7 @@ const Projects = () => {
           <div key={proyecto.id} className="project-card">
             <div className="project-content">
               <h3>{proyecto.nombre}</h3>
-              <p>Tecnologías: {proyecto.lenguaje}</p>
+              <p>Tecnologías: <strong>{proyecto.lenguaje}</strong></p>
             </div>
             <button className="btn-details" onClick={() => alert("El modal lo haré mañana")}>Ver detalles</button>
           </div>
