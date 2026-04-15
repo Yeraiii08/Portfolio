@@ -13,13 +13,15 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
     position: 'fixed',
     top: 0,
     left: 0,
-    zIndex: 1000
+    zIndex: 1000,
+    backgroundColor: isDarkMode ? '#1a1a1a' : '#ffffff',
+    color: isDarkMode ? '#f0f0f0' : 'black'
   };
 
   const nombre = {
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    color: 'black'
+    color: isDarkMode ? '#f0f0f0' : 'black'
   };
 
   const linkContainer = {
@@ -33,7 +35,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
   const link = {
     textDecoration: 'none',
-    color: 'black',
+    color: isDarkMode ? '#f0f0f0' : 'black',
     fontWeight: '500',
     cursor: 'pointer',
   };

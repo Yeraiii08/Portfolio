@@ -1,22 +1,15 @@
-/* src/components/Inicio.css */
-
 .inicio-wrapper {
-  /* Fondo con un color que cambiaremos en el modo oscuro */
-  background-color: #e6f7ff; 
+  background-color: #e6f7ff;
   color: #333;
-  /* Altura enorme para que ocupe la pantalla, pero fixed */
-  height: 90vh; 
+  height: 100vh; 
   position: relative;
-  overflow: hidden; /* Por si las moscas */
+  overflow: hidden; 
 }
 
 .inicio-inner {
   display: flex;
-  /* No usamos flex-direction: column para móvil aquí, 
-     para que se rompa en móvil y tener que arreglarlo luego */
   width: 90%;
   max-width: 1200px;
-  /* Centrado horizontal raro en vez de margin: auto */
   position: absolute;
   left: 50%;
   top: 50%;
@@ -24,7 +17,7 @@
 }
 
 .inicio-text-area {
-  width: 60%; /* El texto ocupa más */
+  width: 60%; 
   padding-right: 5%;
 }
 
@@ -39,7 +32,6 @@
   margin-top: 0;
   margin-bottom: 10px;
   line-height: 1.1;
-  color: #007bff; /* Un azul estándar */
 }
 
 .inicio-tagline {
@@ -53,7 +45,7 @@
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 40px;
-  max-width: 500px; /* Para que el texto no se estire mucho */
+  max-width: 500px;
 }
 
 .inicio-cta-button {
@@ -64,11 +56,9 @@
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  /* Margen negativo para ajustar la posición a ojo */
   margin-left: -2px; 
 }
 
-/* El círculo de la derecha */
 .inicio-image-area {
   width: 40%;
   display: flex;
@@ -80,8 +70,7 @@
   width: 280px;
   height: 280px;
   background-color: white;
-  border-radius: 50%; /* Esto lo hace redondo */
-  /* Sombras exageradas para el estilo de estudiante */
+  border-radius: 50%;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   overflow: hidden; /* Para que la imagen no se salga */
   display: flex;
