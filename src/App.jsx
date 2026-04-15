@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './componentes/Navbar';
 import Inicio from './componentes/Inicio';
+import Proyectos from './componentes/Proyectos';
 import './App.css';
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
 
   return (
     <div>
-      <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      <Inicio />
+      <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>
+      <Inicio/>
+      <Proyectos/>
     </div>
   )
 }
