@@ -23,6 +23,7 @@ function App() {
     <div>
       <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode}/>
       <Inicio/>
+      <hr></hr>
       <Proyectos/>
     </div>
   )

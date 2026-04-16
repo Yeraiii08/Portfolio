@@ -1,8 +1,14 @@
 .projects-section {
+  width: 100%; 
+  box-sizing: border-box; 
   padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin: 0;
   font-family: sans-serif;
+  background-color: #e6f7ff;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; 
 }
 
 .projects-section h2 {
@@ -36,6 +42,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  max-width: 1200px; 
+  margin: 0 auto;
 }
 
 .project-card {
