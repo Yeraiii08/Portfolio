@@ -2,63 +2,63 @@ import React, { useState, useEffect } from 'react';
 import './Proyectos.css';
 
 const Projects = () => {
-  const misProyectos = [
-    { id: 1, nombre: "Un Proyecto", lenguaje: "JavaScript" },
-    { id: 2, nombre: "Otro", lenguaje: "React" },
-    { id: 3, nombre: "fasdfasdf", lenguaje: "JavaScript" },
-    { id: 4, nombre: "nojsdnvinvjnosnf", lenguaje: "HTML/CSS" }
-  ];
-
+  const [misProyectos, setMisProyectos] = useState([]);
+  const [proyectosMostrados, setProyectosMostrados] = useState([]);
   const [filtro, setFiltro] = useState('Todos');
-  const [proyectosMostrados, setProyectosMostrados] = useState(misProyectos);
+  const [cargando, setCargando] = useState(true);
+
+  // API de GitHub
+  useEffect(() => {
+    fetch('https://api.github.com/users/Yeraiii08/repos')
+      .then(response => response.json())
+      .then(data => {
+        const reposPropios = data.filter(repo => !repo.fork);
+        setMisProyectos(reposPropios);
+        setProyectosMostrados(reposPropios);
+        setCargando(false);
+      })
+      .catch(error => {
+        console.error("Error cargando los repositorios:", error);
+        setCargando(false);
+      });
+  }, []);
 
   useEffect(() => {
     if (filtro === 'Todos') {
       setProyectosMostrados(misProyectos);
     } else {
-      const filtrados = misProyectos.filter(proyecto => 
-        proyecto.lenguaje.includes(filtro)
-      );
+      const filtrados = misProyectos.filter(proyecto => proyecto.language === filtro);
       setProyectosMostrados(filtrados);
     }
-  }, [filtro]);
+  }, [filtro, misProyectos]);
 
   return (
     <section id="projects" className="projects-section">
-      <h2>Mis Proyectos</h2>
+      <h2>Mis Proyectos de GitHub</h2>
       
-      <div className="filtros">
-        <button 
-          className={filtro === 'Todos' ? 'active' : ''} 
-          onClick={() => setFiltro('Todos')}
-        >
-          Todos
-        </button>
-        <button 
-          className={filtro === 'React' ? 'active' : ''} 
-          onClick={() => setFiltro('React')}
-        >
-          React
-        </button>
-        <button 
-          className={filtro === 'JavaScript' ? 'active' : ''} 
-          onClick={() => setFiltro('JavaScript')}
-        >
-          JavaScript
-        </button>
+      <div className="filtros" style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <button onClick={() => setFiltro('Todos')}>Todos</button>
+        <button onClick={() => setFiltro('C#')}>C#</button>
+        <button onClick={() => setFiltro('Java')}>Java</button>
+        <button onClick={() => setFiltro('Python')}>Python</button>
+        <button onClick={() => setFiltro('JavaScript')}>JavaScript</button>
+        <button onClick={() => setFiltro('HTML')}>HTML</button>
+        <button onClick={() => setFiltro('CSS')}>CSS</button>
       </div>
 
-      <div className="projects-grid">
-        {proyectosMostrados.map((proyecto) => (
-          <div key={proyecto.id} className="project-card">
-            <div className="project-content">
-              <h3>{proyecto.nombre}</h3>
-              <p>Tecnologías: <strong>{proyecto.lenguaje}</strong></p>
+      {cargando ? (
+        <p style={{ textAlign: 'center' }}>Cargando...</p>
+      ) : (
+        <div className="projects-grid">
+          {proyectosMostrados.map((proyecto) => (
+            <div key={proyecto.id} className="project-card">
+              <h3>{proyecto.name}</h3>
+              <p>Tecnología principal: {proyecto.language || 'Varias'}</p> 
+              <button onClick={() => alert("Modal en el siguiente commit")}>Ver detalles</button>
             </div>
-            <button className="btn-details" onClick={() => alert("El modal lo haré mañana")}>Ver detalles</button>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };
