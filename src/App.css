@@ -82,3 +82,40 @@ body.dark-theme {
 .dark-theme .project-card button:hover {
   background-color: #1e7e34;
 }
+
+
+/* Para el apartado de detalles */
+.Detalles-caja-fea {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border: 2px solid #333;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.cerrar-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Para Modo oscuro */
+.dark-theme .Detalles-caja-fea {
+  background-color: #222;
+  border-color: #555;
+  color: white;
+}

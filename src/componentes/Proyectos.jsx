@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Proyectos.css';
+import Detalles from './Detalles-proyecto';
 
 const Projects = () => {
   const [misProyectos, setMisProyectos] = useState([]);
   const [proyectosMostrados, setProyectosMostrados] = useState([]);
   const [filtro, setFiltro] = useState('Todos');
   const [cargando, setCargando] = useState(true);
+  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
 
   // API de GitHub
   useEffect(() => {
@@ -54,10 +56,17 @@ const Projects = () => {
             <div key={proyecto.id} className="project-card">
               <h3>{proyecto.name}</h3>
               <p>Tecnología principal: {proyecto.language || 'Varias'}</p> 
-              <button onClick={() => alert("Modal en el siguiente commit")}>Ver detalles</button>
+              <button onClick={() => setProyectoSeleccionado(proyecto)}>Ver detalles</button>
             </div>
           ))}
         </div>
+      )}
+
+      {proyectoSeleccionado && (
+        <Detalles 
+          proyecto={proyectoSeleccionado} 
+          cerrarDetalles={() => setProyectoSeleccionado(null)} 
+        />
       )}
     </section>
   );
