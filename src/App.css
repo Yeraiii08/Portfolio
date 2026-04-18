@@ -113,9 +113,41 @@ body.dark-theme {
   cursor: pointer;
 }
 
-/* Para Modo oscuro */
 .dark-theme .Detalles-caja-fea {
   background-color: #222;
   border-color: #555;
   color: white;
+}
+
+.skills-container {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.skill-box {
+  margin-bottom: 15px;
+}
+
+.progress-bg {
+  background-color: #ddd;
+  border-radius: 10px;
+  width: 100%;
+  height: 25px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  height: 100%;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 25px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  transition: width 2s ease-in-out;
+}
+
+.dark-theme .progress-bg {
+  background-color: #555;
 }

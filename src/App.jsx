@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './componentes/Navbar';
 import Inicio from './componentes/Inicio';
 import Proyectos from './componentes/Proyectos';
+import SobreMi from './componentes/Sobre_mi';
+import Contacto from './componentes/Contacto';
 import './App.css';
 
 function App() {
@@ -25,6 +27,10 @@ function App() {
       <Inicio/>
       <hr></hr>
       <Proyectos/>
+      <hr></hr>
+      <SobreMi/>
+      <hr></hr>
+      <Contacto/>
     </div>
   )
 }
