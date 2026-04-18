@@ -7,26 +7,56 @@ const SobreMi = () => {
       <div className="sobreMi-container">
         <h2 className="sobreMi-title">Sobre Mí</h2>
         <p>
-          Soy un estudiante de Ingenieria Informatica. Este es mi nivel de tecnologias:
+          Soy un estudiante de Ingenieria Informatica. Este es mi nivel de tecnologias y herramientas:
         </p>
         
         <div className="skills-container">
           <div className="skill-box">
             <span className="skill-name">HTML/CSS</span>
             <div className="progress-bg">
-              <div className="progress-bar" style={{ width: '85%' }}>85%</div>
+              <div className="progress-bar" style={{ width: '90%' }}>90%</div>
             </div>
           </div>
           <div className="skill-box">
             <span className="skill-name">JavaScript</span>
             <div className="progress-bg">
-              <div className="progress-bar" style={{ width: '70%' }}>70%</div>
+              <div className="progress-bar" style={{ width: '80%' }}>80%</div>
             </div>
           </div>
           <div className="skill-box">
             <span className="skill-name">React</span>
             <div className="progress-bg">
               <div className="progress-bar" style={{ width: '50%' }}>50%</div>
+            </div>
+          </div>
+          <div className="skill-box">
+            <span className="skill-name">Python & Django</span>
+            <div className="progress-bg">
+              <div className="progress-bar" style={{ width: '65%' }}>65%</div>
+            </div>
+          </div>
+          <div className="skill-box">
+            <span className="skill-name">Java</span>
+            <div className="progress-bg">
+              <div className="progress-bar" style={{ width: '85%' }}>85%</div>
+            </div>
+          </div>
+          <div className="skill-box">
+            <span className="skill-name">SQL</span>
+            <div className="progress-bg">
+              <div className="progress-bar" style={{ width: '85%' }}>85%</div>
+            </div>
+          </div>
+          <div className="skill-box">
+            <span className="skill-name">Nasdaq Calypso</span>
+            <div className="progress-bg">
+              <div className="progress-bar" style={{ width: '40%' }}>40%</div>
+            </div>
+          </div>
+          <div className="skill-box">
+            <span className="skill-name">Excel</span>
+            <div className="progress-bg">
+              <div className="progress-bar" style={{ width: '70%' }}>70%</div>
             </div>
           </div>
         </div>

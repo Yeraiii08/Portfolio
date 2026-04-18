@@ -7,7 +7,7 @@ const Detalles = ({ proyecto, cerrarDetalles }) => {
     <div className="Detalles-caja-fea">
       <button className="cerrar-btn" onClick={cerrarDetalles}>X</button>
       <h2>{proyecto.name}</h2>
-      <p><strong>Descripción:</strong> Aqui va la descripcion del proyecto. Pero mis proyectos de Github no tienen descripcion xD</p>
+      <p><strong>Descripción:</strong> Este proyecto no tiene descripcion</p>
       <hr></hr>
       <p><strong>Lenguaje principal:</strong> {proyecto.language}</p>
 
