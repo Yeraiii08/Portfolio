@@ -1,4 +1,5 @@
 import React from 'react';
+import './Sobre_mi.css';
 
 const SobreMi = () => {
   return (

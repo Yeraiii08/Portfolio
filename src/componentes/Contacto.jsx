@@ -1,8 +1,9 @@
 import React from 'react';
+import './Contacto.css';
 
 const Contacto = () => {
   return (
-    <section id="contact" style={{ padding: '50px 20px', textAlign: 'center', backgroundColor: '#333', color: 'white' }}>
+    <section id="contacto">
       <h2>Contactame</h2>
       <p>Puedes contactar conmigo mediante:</p>
       
