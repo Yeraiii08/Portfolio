@@ -1,5 +1,6 @@
 import React from 'react';
 import './Inicio.css';
+import miFoto from '../Imagenes/MiFoto.jpg';
 
 const Inicio = () => {
   return (
@@ -19,8 +20,8 @@ const Inicio = () => {
         <div className="inicio-image-area">
           <div className="inicio-circle">
             <img 
-              src="https://via.placeholder.com/250" 
-              alt="Foto de perfil de [Nombre]" 
+              src={miFoto}
+              alt="Foto de perfil" 
               className="inicio-avatar"
             />
           </div>
