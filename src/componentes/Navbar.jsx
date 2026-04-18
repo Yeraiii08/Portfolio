@@ -48,8 +48,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
 
       <ul style={linkContainer}>
         <li><a href="#inicio" style={link}>Inicio</a></li>
-        <li><a href="#sobre-mi" style={link}>Sobre mí</a></li>
-        <li><a href="#proyectos" style={link}>Proyectos</a></li>
+        <li><a href="#projects" style={link}>Proyectos</a></li>
+        <li><a href="#sobreMi" style={link}>Sobre mí</a></li>
         <li><a href="#contacto" style={link}>Contacto</a></li>
 
         <li>

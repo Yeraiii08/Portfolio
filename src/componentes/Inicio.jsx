@@ -14,7 +14,7 @@ const Inicio = () => {
           <p className="inicio-desc">
             Bienvenido a mi portfolio. Actualmente estoy estoy estudiante de Ingenieria Informatica y trabajo como desarrollador de software en Accenture
           </p>
-          <a href="#" className="inicio-cta-button">Ver mis proyectos</a>
+          <a href="#projects" className="inicio-cta-button">Ver mis proyectos</a>
         </div>
 
         <div className="inicio-image-area">
